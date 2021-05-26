@@ -1,0 +1,108 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #000000;
+}
+.navbar-brand{
+    font-size: 16px;
+}
+.navbar-font{
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+}
+.navbar-font:hover{
+    font-size: 12.5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+
+
+.no-border{
+    border: none;
+}
+.no-border .card-img-top{
+    height: 3rem;
+}
+
+.h-1 {
+    height: 2rem;
+}
+
+.sub-headings {
+    font-size: 48px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+
+
+.headings { 
+     font-size: 4rem;
+     font-weight: bold;
+     font-family: 'Montserrat', sans-serif;
+     line-height: 50px;
+     color: #000000;
+     font-stretch: ultra-expanded;
+}
+
+.project-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;  
+    color: #ffffff;
+}
+
+.project-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px; 
+    color: #ffffff; 
+}
+
+.image-card{
+    height: 250px;
+     background: url(https://res.cloudinary.com/adrean123/image/upload/v1619966307/AaliyahSpeaksBlog/bwuv8bpucidv3vlysj9g.jpg);
+    background-position: bottom; 
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    transition-duration: 2s;
+    
+    transition-timing-function: linear;
+}
+
+
+.image-card:hover{
+ 
+    background: 
+    linear-gradient(
+        rgba(60, 21, 170, 0.137),
+        rgba(22, 132, 223, 0.137)
+     );
+    /*,
+    url(https://res.cloudinary.com/adrean123/image/upload/v1619966307/AaliyahSpeaksBlog/bwuv8bpucidv3vlysj9g.jpg);
+    background-size: cover;
+     */
+}
+#header{
+    width: 50%;
+    margin: auto;
+    
+}
+
+@media only screen and (max-width: 800px) {
+  
+    .headings { 
+        font-size: 2.0rem;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 50px;
+        color: #000000;
+        font-stretch: ultra-condensed;
+   }
+  
+   .hover .card .m-2 .image-card{
+       width: 100%;
+   }
+}
+
