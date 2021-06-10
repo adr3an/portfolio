@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/resume', (req, res) => {
-    res.render('resume');
+    res.render('next');
 });
 
 app.listen(process.env.PORT, () => {
