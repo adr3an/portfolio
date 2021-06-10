@@ -1,17 +1,31 @@
-const hiddenDivs = document.querySelectorAll('.container .d-none');
-const hoverables = document.querySelectorAll('.hover');
+// initializing key variables || 
+// importing packages and assigning variable names
+const express = require('express');
+const app = express();
+const path = require('path');
+const ejsMate = require('ejs-mate');
 
-console.log("live");
+//setting app behavior re: views to be rendered
 
+app.engine('ejs', ejsMate);
+app.set('view engine', "ejs")
+app.set('views', path.join(__dirname, 'views'));
 
+// defining middleware
 
-hoverables.forEach(function (hoverable, i) {
-    hoverable.addEventListener('mouseover', function hover() {
-        hiddenDivs[i].classList.remove('d-none')
-    });
+app.use(express.static(path.join(__dirname, 'public')));
 
-    hoverable.addEventListener('mouseleave', function leave() {
-        hiddenDivs[i].classList.add('d-none')
+//render pages to url 
 
-    });
+app.get('/', (req, res) => {
+    res.render('index');
 });
+
+
+app.get('/resume', (req, res) => {
+    res.render('resume');
+});
+
+app.listen(process.env.PORT, () => {
+    console.log('live');
+})
